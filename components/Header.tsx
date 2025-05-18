@@ -2,10 +2,27 @@
 
 import Link from 'next/link';
 import Image from 'next/image';
-import { useState } from 'react';
+import { useState, useRef, useEffect } from 'react';
+
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+  const [activeSubDropdown, setActiveSubDropdown] = useState<string | null>(null);
+  const dropdownRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
+        setActiveDropdown(null);
+        setActiveSubDropdown(null);
+      }
+    };
+
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => document.removeEventListener('mousedown', handleClickOutside);
+  }, []);
 
   return (
     <header className="fixed w-full bg-white shadow-md z-50">
@@ -51,7 +68,7 @@ const Header = () => {
           {/* Logo */}
           <Link href="/" className="flex items-center">
             <Image
-              src="/logo.png"
+              src={`${basePath}/logo.png`}
               alt="Cargo World Link Logo"
               width={360}
               height={100}
@@ -61,10 +78,89 @@ const Header = () => {
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex space-x-8 ml-auto">
+          <nav className="hidden md:flex space-x-8 ml-auto" ref={dropdownRef}>
             <Link href="/about" className="text-[#283694] hover:text-[#283694]/80">
               About Us
             </Link>
+            <div className="relative group">
+              <button
+                className="text-[#283694] hover:text-[#283694]/80 flex items-center space-x-1"
+                onClick={() => setActiveDropdown(activeDropdown === 'services' ? null : 'services')}
+                onMouseEnter={() => setActiveDropdown('services')}
+              >
+                <span>Services</span>
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                </svg>
+              </button>
+              {activeDropdown === 'services' && (
+                <div 
+                  className="absolute left-0 mt-2 w-64 bg-white shadow-lg rounded-md py-2 z-50"
+                  onMouseLeave={() => setActiveDropdown(null)}
+                >
+                  <div 
+                    className="relative px-4 py-2 hover:bg-gray-50 flex items-center justify-between"
+                    onMouseEnter={() => setActiveSubDropdown('air-freight')}
+                  >
+                    <Link href="/services/air-freight">Air Freight Services</Link>
+                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                    </svg>
+                    {activeSubDropdown === 'air-freight' && (
+                      <div className="absolute left-full top-0 w-64 bg-white shadow-lg rounded-md py-2">
+                        <Link href="/air-freight-services-to-africa" className="block px-4 py-2 hover:bg-gray-50">
+                          Air Freight Services To Africa
+                        </Link>
+                      </div>
+                    )}
+                  </div>
+                  <div 
+                    className="relative px-4 py-2 hover:bg-gray-50 flex items-center justify-between"
+                    onMouseEnter={() => setActiveSubDropdown('sea-freight')}
+                  >
+                    <Link href="/services/sea-freight">Sea Freight</Link>
+                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                    </svg>
+                    {activeSubDropdown === 'sea-freight' && (
+                      <div className="absolute left-full top-0 w-64 bg-white shadow-lg rounded-md py-2">
+                        <Link href="/sea-freight-to-africa" className="block px-4 py-2 hover:bg-gray-50">
+                          Sea Freight To Africa
+                        </Link>
+                      </div>
+                    )}
+                  </div>
+                  <div 
+                    className="relative px-4 py-2 hover:bg-gray-50 flex items-center justify-between"
+                    onMouseEnter={() => setActiveSubDropdown('vehicle-shipping')}
+                  >
+                    <Link href="/services/vehicle-shipping">Vehicle Shipping</Link>
+                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                    </svg>
+                    {activeSubDropdown === 'vehicle-shipping' && (
+                      <div className="absolute left-full top-0 w-64 bg-white shadow-lg rounded-md py-2">
+                        <Link href="/shipping-cars-to-africa" className="block px-4 py-2 hover:bg-gray-50">
+                          Shipping Cars To Africa
+                        </Link>
+                        <Link href="/vehicle-shipping-sailing-schedule" className="block px-4 py-2 hover:bg-gray-50">
+                          Vehicle Shipping Sailing Schedule
+                        </Link>
+                      </div>
+                    )}
+                  </div>
+                  <Link href="/services/container-shipping" className="block px-4 py-2 hover:bg-gray-50">
+                    Container Shipping
+                  </Link>
+                  <Link href="/services/packaging-and-storage" className="block px-4 py-2 hover:bg-gray-50">
+                    Packaging and Storage
+                  </Link>
+                  <Link href="/vehicle-procurement-car-purchase" className="block px-4 py-2 hover:bg-gray-50">
+                    Vehicle Procurement/ Car Purchase
+                  </Link>
+                </div>
+              )}
+            </div>
             <Link href="/business-solutions" className="text-[#283694] hover:text-[#283694]/80">
               Business Solutions
             </Link>
@@ -133,6 +229,83 @@ const Header = () => {
               >
                 About Us
               </Link>
+              <div className="px-3 py-2">
+                <button 
+                  onClick={() => setActiveDropdown(activeDropdown === 'mobile-services' ? null : 'mobile-services')}
+                  className="flex items-center justify-between w-full text-gray-600 hover:text-blue-600"
+                >
+                  <span>Services</span>
+                  <svg className={`w-4 h-4 transform transition-transform ${activeDropdown === 'mobile-services' ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                  </svg>
+                </button>
+                {activeDropdown === 'mobile-services' && (
+                  <div className="mt-2 ml-4 space-y-2">
+                    <div>
+                      <button 
+                        onClick={() => setActiveSubDropdown(activeSubDropdown === 'mobile-air-freight' ? null : 'mobile-air-freight')}
+                        className="flex items-center justify-between w-full text-gray-600 hover:text-blue-600 py-1"
+                      >
+                        <span>Air Freight Services</span>
+                        <svg className={`w-4 h-4 transform transition-transform ${activeSubDropdown === 'mobile-air-freight' ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                        </svg>
+                      </button>
+                      {activeSubDropdown === 'mobile-air-freight' && (
+                        <Link href="/air-freight-services-to-africa" className="block pl-4 py-1 text-gray-600 hover:text-blue-600">
+                          Air Freight Services To Africa
+                        </Link>
+                      )}
+                    </div>
+                    <div>
+                      <button 
+                        onClick={() => setActiveSubDropdown(activeSubDropdown === 'mobile-sea-freight' ? null : 'mobile-sea-freight')}
+                        className="flex items-center justify-between w-full text-gray-600 hover:text-blue-600 py-1"
+                      >
+                        <span>Sea Freight</span>
+                        <svg className={`w-4 h-4 transform transition-transform ${activeSubDropdown === 'mobile-sea-freight' ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                        </svg>
+                      </button>
+                      {activeSubDropdown === 'mobile-sea-freight' && (
+                        <Link href="/sea-freight-to-africa" className="block pl-4 py-1 text-gray-600 hover:text-blue-600">
+                          Sea Freight To Africa
+                        </Link>
+                      )}
+                    </div>
+                    <div>
+                      <button 
+                        onClick={() => setActiveSubDropdown(activeSubDropdown === 'mobile-vehicle-shipping' ? null : 'mobile-vehicle-shipping')}
+                        className="flex items-center justify-between w-full text-gray-600 hover:text-blue-600 py-1"
+                      >
+                        <span>Vehicle Shipping</span>
+                        <svg className={`w-4 h-4 transform transition-transform ${activeSubDropdown === 'mobile-vehicle-shipping' ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                        </svg>
+                      </button>
+                      {activeSubDropdown === 'mobile-vehicle-shipping' && (
+                        <div className="pl-4 space-y-1">
+                          <Link href="/shipping-cars-to-africa" className="block py-1 text-gray-600 hover:text-blue-600">
+                            Shipping Cars To Africa
+                          </Link>
+                          <Link href="/vehicle-shipping-sailing-schedule" className="block py-1 text-gray-600 hover:text-blue-600">
+                            Vehicle Shipping Sailing Schedule
+                          </Link>
+                        </div>
+                      )}
+                    </div>
+                    <Link href="/services/container-shipping" className="block py-1 text-gray-600 hover:text-blue-600">
+                      Container Shipping
+                    </Link>
+                    <Link href="/services/packaging-and-storage" className="block py-1 text-gray-600 hover:text-blue-600">
+                      Packaging and Storage
+                    </Link>
+                    <Link href="/vehicle-procurement-car-purchase" className="block py-1 text-gray-600 hover:text-blue-600">
+                      Vehicle Procurement/ Car Purchase
+                    </Link>
+                  </div>
+                )}
+              </div>
               <Link
                 href="/business-solutions"
                 className="block px-3 py-2 text-gray-600 hover:text-blue-600"

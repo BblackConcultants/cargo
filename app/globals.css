@@ -1,3 +1,19 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.partner-item {
+  transition: all 0.3s ease;
+}
+
+.partner-item img {
+  filter: grayscale(100%);
+  transition: all 0.3s ease;
+  opacity: 0.8;
+}
+
+.partner-item:hover img {
+  filter: grayscale(0%);
+  transform: scale(1.05);
+  opacity: 1;
+}

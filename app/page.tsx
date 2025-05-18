@@ -2,6 +2,8 @@ import Image from 'next/image'
 import Link from 'next/link'
 import ShippingForm from '@/components/ShippingForm'
 
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH || ''
+
 export default function Home() {
   return (
     <div>
@@ -13,7 +15,7 @@ export default function Home() {
           muted
           loop
           playsInline
-          src="/videos/home-hero.mp4"
+          src={`${basePath}/videos/home-hero.mp4`}
         />
         <div className="absolute inset-0 bg-black opacity-50"></div>
         <div className="container mx-auto px-4 relative z-10">
@@ -57,7 +59,7 @@ export default function Home() {
       </div>
 
       {/* Global Shipping Section */}
-      <section className="relative bg-cover bg-center py-24" style={{ backgroundImage: "url('/images/hero_bg_4.jpg')" }}>
+      <section className="relative bg-cover bg-center py-24" style={{ backgroundImage: `url('${basePath}/images/hero_bg_4.jpg')` }}>
         <div className="absolute inset-0 bg-black opacity-50"></div>
         <div className="container mx-auto px-4 relative z-10">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -66,14 +68,14 @@ export default function Home() {
               <p className="text-white mb-8">Experience hassle-free shipping with our comprehensive global logistics solutions. We handle everything from documentation to delivery, ensuring your cargo reaches its destination safely and on time.</p>
               <div className="flex space-x-4">
                 <Image
-                  src="/images/google-reviews.svg"
+                  src={`${basePath}/images/google-reviews.svg`}
                   alt="Google Reviews"
                   width={150}
                   height={50}
                   style={{ width: 'auto', height: '50px' }}
                 />
                 <Image
-                  src="/images/trustpilot.svg"
+                  src={`${basePath}/images/trustpilot.svg`}
                   alt="Trust Pilot"
                   width={150}
                   height={50}
@@ -318,7 +320,7 @@ export default function Home() {
           <div className="flex justify-center">
             <div className="flex items-center justify-center gap-8 flex-wrap">
               <Image
-                src="/images/partners/AEO_final-cs.jpg"
+                src={`${basePath}/images/partners/AEO_final-cs.jpg`}
                 alt="AEO Certification"
                 width={120}
                 height={60}
@@ -326,7 +328,7 @@ export default function Home() {
                 style={{ width: 'auto', height: '60px' }}
               />
               <Image
-                src="/images/partners/iso.png"
+                src={`${basePath}/images/partners/iso.png`}
                 alt="ISO Certification"
                 width={120}
                 height={60}
@@ -334,7 +336,7 @@ export default function Home() {
                 style={{ width: 'auto', height: '60px' }}
               />
               <Image
-                src="/images/partners/Bifa Logo.png"
+                src={`${basePath}/images/partners/Bifa Logo.png`}
                 alt="BIFA Member"
                 width={120}
                 height={60}

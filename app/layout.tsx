@@ -1,9 +1,11 @@
 import './globals.css'
+import './fonts.css'
 import type { Metadata } from 'next'
 import Header from '../components/Header'
 import Link from 'next/link'
 import Script from 'next/script'
-import '@fortawesome/fontawesome-free/css/all.min.css'
+
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH || ''
 
 export const metadata: Metadata = {
   title: 'Cargo World Link',
@@ -12,7 +14,7 @@ export const metadata: Metadata = {
     {
       rel: 'icon',
       type: 'image/png',
-      url: '/favicon.png',
+      url: `${basePath}/favicon.png`,
     }
   ]
 }
