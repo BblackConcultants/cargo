@@ -88,7 +88,7 @@ const Header = () => {
                 onClick={() => setActiveDropdown(activeDropdown === 'services' ? null : 'services')}
                 onMouseEnter={() => setActiveDropdown('services')}
               >
-                <span>Services</span>
+                <span>Consumer Solutions</span>
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                 </svg>
@@ -114,21 +114,9 @@ const Header = () => {
                       </div>
                     )}
                   </div>
-                  <div 
-                    className="relative px-4 py-2 hover:bg-gray-50 flex items-center justify-between"
-                    onMouseEnter={() => setActiveSubDropdown('sea-freight')}
-                  >
+                  <div className="px-4 py-2 hover:bg-gray-50">
                     <Link href="/services/sea-freight">Sea Freight</Link>
-                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                    </svg>
-                    {activeSubDropdown === 'sea-freight' && (
-                      <div className="absolute left-full top-0 w-64 bg-white shadow-lg rounded-md py-2">
-                        <Link href="/sea-freight-to-africa" className="block px-4 py-2 hover:bg-gray-50">
-                          Sea Freight To Africa
-                        </Link>
-                      </div>
-                    )}
+
                   </div>
                   <div 
                     className="relative px-4 py-2 hover:bg-gray-50 flex items-center justify-between"
@@ -163,9 +151,6 @@ const Header = () => {
             </div>
             <Link href="/business-solutions" className="text-[#283694] hover:text-[#283694]/80">
               Business Solutions
-            </Link>
-            <Link href="/consumer-solutions" className="text-[#283694] hover:text-[#283694]/80">
-              Consumer Solutions
             </Link>
             <Link href="/locations" className="text-[#283694] hover:text-[#283694]/80">
               Locations
@@ -267,11 +252,7 @@ const Header = () => {
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                         </svg>
                       </button>
-                      {activeSubDropdown === 'mobile-sea-freight' && (
-                        <Link href="/sea-freight-to-africa" className="block pl-4 py-1 text-gray-600 hover:text-blue-600">
-                          Sea Freight To Africa
-                        </Link>
-                      )}
+
                     </div>
                     <div>
                       <button 
@@ -311,12 +292,6 @@ const Header = () => {
                 className="block px-3 py-2 text-gray-600 hover:text-blue-600"
               >
                 Business Solutions
-              </Link>
-              <Link
-                href="/consumer-solutions"
-                className="block px-3 py-2 text-gray-600 hover:text-blue-600"
-              >
-                Consumer Solutions
               </Link>
               <Link
                 href="/locations"
