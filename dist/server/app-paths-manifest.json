@@ -1,7 +1,9 @@
 {
-  "/not-found": "app/not-found.js",
-  "/page": "app/page.js",
-  "/services/sea-freight/page": "app/services/sea-freight/page.js",
-  "/air-freight-services-to-africa/page": "app/air-freight-services-to-africa/page.js",
-  "/favicon.ico/route": "app/favicon.ico/route.js"
+  "/export-services/page": "app/export-services/page.js",
+  "/documentation/page": "app/documentation/page.js",
+  "/customs-clearance/page": "app/customs-clearance/page.js",
+  "/freight-packaging/page": "app/freight-packaging/page.js",
+  "/import-services/page": "app/import-services/page.js",
+  "/road-freight/page": "app/road-freight/page.js",
+  "/warehousing/page": "app/warehousing/page.js"
 }
