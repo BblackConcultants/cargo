@@ -1,8 +1,9 @@
 {
   "/_not-found/page": "app/_not-found/page.js",
-  "/report-bug/page": "app/report-bug/page.js",
   "/page": "app/page.js",
+  "/report-bug/page": "app/report-bug/page.js",
   "/about/page": "app/about/page.js",
   "/contact/page": "app/contact/page.js",
-  "/services/road-freight/page": "app/services/road-freight/page.js"
+  "/services/road-freight/page": "app/services/road-freight/page.js",
+  "/services/packing-materials/page": "app/services/packing-materials/page.js"
 }

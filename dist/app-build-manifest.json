@@ -31,6 +31,11 @@
       "static/chunks/main-app.js",
       "static/chunks/app/services/road-freight/page.js"
     ],
+    "/services/packing-materials/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/services/packing-materials/page.js"
+    ],
     "/_not-found/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
