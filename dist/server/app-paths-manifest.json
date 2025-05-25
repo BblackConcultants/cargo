@@ -1,9 +1,8 @@
 {
-  "/export-services/page": "app/export-services/page.js",
-  "/documentation/page": "app/documentation/page.js",
-  "/customs-clearance/page": "app/customs-clearance/page.js",
-  "/freight-packaging/page": "app/freight-packaging/page.js",
-  "/import-services/page": "app/import-services/page.js",
-  "/road-freight/page": "app/road-freight/page.js",
-  "/warehousing/page": "app/warehousing/page.js"
+  "/_not-found/page": "app/_not-found/page.js",
+  "/report-bug/page": "app/report-bug/page.js",
+  "/page": "app/page.js",
+  "/about/page": "app/about/page.js",
+  "/contact/page": "app/contact/page.js",
+  "/services/road-freight/page": "app/services/road-freight/page.js"
 }

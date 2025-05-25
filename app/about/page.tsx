@@ -62,7 +62,7 @@ export default function About() {
         </div>
       </div>
       {/* Hero Section */}
-      <section className="relative h-[40vh] flex items-center text-white overflow-hidden">
+      <section className="relative h-[50vh] md:h-[60vh] flex items-center text-white overflow-hidden">
         <Image
           src="/images/about-hero.jpg"
           alt="About Us Hero"
@@ -76,7 +76,7 @@ export default function About() {
             <h1 className="text-5xl md:text-6xl font-bold mb-6">
               About Us
             </h1>
-            <p className="text-xl mb-8">
+            <p className="text-xl md:text-2xl mb-8 leading-relaxed max-w-2xl">
               Experts in quick, cost-effective deliveries from UK to any destination in the world
             </p>
           </div>

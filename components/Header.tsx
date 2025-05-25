@@ -64,7 +64,7 @@ const Header = () => {
 
       {/* Main Header */}
       <div className="container mx-auto px-4">
-        <div className="flex justify-between items-center h-32">
+        <div className="flex justify-between items-center h-24 md:h-32">
           {/* Logo */}
           <Link href="/" className="flex items-center">
             <Image
@@ -72,7 +72,7 @@ const Header = () => {
               alt="Cargo World Link Logo"
               width={360}
               height={100}
-              className="h-24 w-auto"
+              className="h-16 md:h-24 w-auto"
               priority
             />
           </Link>
@@ -98,41 +98,34 @@ const Header = () => {
                   className="absolute left-0 mt-2 w-64 bg-white shadow-lg rounded-md py-2 z-50"
                   onMouseLeave={() => setActiveDropdown(null)}
                 >
-
-                  <div className="px-4 py-2 hover:bg-gray-50">
-                    <Link href="/services/sea-freight">Sea Freight</Link>
-                  </div>
-                  <div 
-                    className="relative px-4 py-2 hover:bg-gray-50 flex items-center justify-between"
-                    onMouseEnter={() => setActiveSubDropdown('vehicle-shipping')}
-                  >
-                    <Link href="/services/vehicle-shipping">Vehicle Shipping</Link>
-                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                    </svg>
-                    {activeSubDropdown === 'vehicle-shipping' && (
-                      <div className="absolute left-full top-0 w-64 bg-white shadow-lg rounded-md py-2">
-                        <Link href="/shipping-cars-to-africa" className="block px-4 py-2 hover:bg-gray-50">
-                          Shipping Cars To Africa
-                        </Link>
-                        <Link href="/vehicle-shipping-sailing-schedule" className="block px-4 py-2 hover:bg-gray-50">
-                          Vehicle Shipping Sailing Schedule
-                        </Link>
-                      </div>
-                    )}
-                  </div>
-                  <Link href="/services/container-shipping" className="block px-4 py-2 hover:bg-gray-50">
-                    Container Shipping
+                  <Link href="/services/air-freight" className="block px-4 py-2 hover:bg-gray-50">
+                    Air Freight
                   </Link>
-                  <Link href="/services/packaging-and-storage" className="block px-4 py-2 hover:bg-gray-50">
-                    Packaging and Storage
+                  <Link href="/services/door-to-door" className="block px-4 py-2 hover:bg-gray-50">
+                    Door To Door
                   </Link>
-                  <Link href="/vehicle-procurement-car-purchase" className="block px-4 py-2 hover:bg-gray-50">
-                    Vehicle Procurement/ Car Purchase
+                  <Link href="/services/sea-freight-shipping" className="block px-4 py-2 hover:bg-gray-50">
+                    Sea Freight
+                  </Link>
+                  <Link href="/services/excess-baggage" className="block px-4 py-2 hover:bg-gray-50">
+                    Excess Baggage
+                  </Link>
+                  <Link href="/services/road-freight" className="block px-4 py-2 hover:bg-gray-50">
+                    Road Freight
+                  </Link>
+                  <Link href="/services/packing-materials" className="block px-4 py-2 hover:bg-gray-50">
+                    Packing Materials
+                  </Link>
+                  <Link href="/services/call-back-request" className="block px-4 py-2 hover:bg-gray-50">
+                    Call Back Request
+                  </Link>
+                  <Link href="/services/you-buy-we-fly" className="block px-4 py-2 hover:bg-gray-50">
+                    You Buy, We Fly
                   </Link>
                 </div>
               )}
             </div>
+
             <div className="relative group">
               <button
                 className="text-[#283694] hover:text-[#283694]/80 flex items-center space-x-1"
@@ -255,8 +248,11 @@ const Header = () => {
                   <div className="mt-2 ml-4 space-y-2">
 
                     <div className="space-y-2">
-                      <Link href="/services/sea-freight" className="block py-1 text-gray-600 hover:text-blue-600">
+                      <Link href="/sea-freight" className="block py-1 text-gray-600 hover:text-blue-600">
                         Sea Freight
+                      </Link>
+                      <Link href="/services/door-to-door" className="block py-1 text-gray-600 hover:text-blue-600">
+                        Door To Door
                       </Link>
                       <div>
                         <button 
@@ -287,6 +283,9 @@ const Header = () => {
                       </Link>
                       <Link href="/vehicle-procurement-car-purchase" className="block py-1 text-gray-600 hover:text-blue-600">
                         Vehicle Procurement/ Car Purchase
+                      </Link>
+                      <Link href="/services/air-freight" className="block py-1 text-gray-600 hover:text-blue-600">
+                        Air Freight
                       </Link>
                     </div>
                   </div>
@@ -330,6 +329,9 @@ const Header = () => {
                     </Link>
                     <Link href="/warehousing" className="block py-1 text-gray-600 hover:text-blue-600">
                       Warehousing
+                    </Link>
+                    <Link href="/services/door-to-door" className="block py-1 text-gray-600 hover:text-blue-600">
+                      Door To Door
                     </Link>
                   </div>
                 )}

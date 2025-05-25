@@ -11,60 +11,25 @@
       "static/css/app/layout.css",
       "static/chunks/app/layout.js"
     ],
-    "/air-freight-services-to-africa/page": [
+    "/report-bug/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/air-freight-services-to-africa/page.js"
+      "static/chunks/app/report-bug/page.js"
     ],
-    "/services/sea-freight/page": [
+    "/about/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/services/sea-freight/page.js"
+      "static/chunks/app/about/page.js"
     ],
-    "/air-freight-services/page": [
+    "/contact/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/air-freight-services/page.js"
+      "static/chunks/app/contact/page.js"
     ],
-    "/road-freight/page": [
+    "/services/road-freight/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/road-freight/page.js"
-    ],
-    "/courier-express/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/courier-express/page.js"
-    ],
-    "/warehousing/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/warehousing/page.js"
-    ],
-    "/freight-packaging/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/freight-packaging/page.js"
-    ],
-    "/customs-clearance/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/customs-clearance/page.js"
-    ],
-    "/import-services/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/import-services/page.js"
-    ],
-    "/export-services/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/export-services/page.js"
-    ],
-    "/documentation/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/documentation/page.js"
+      "static/chunks/app/services/road-freight/page.js"
     ],
     "/_not-found/page": [
       "static/chunks/webpack.js",
