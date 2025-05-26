@@ -258,7 +258,7 @@ export default function Home() {
                   <i className="fas fa-arrow-right absolute right-5 top-1/2 transform -translate-y-1/2 transition-transform group-hover:translate-x-2"></i>
                 </Link>
                 <Link 
-                  href="/quote" 
+                  href="/services/quote" 
                   className="inline-block w-full md:w-auto text-[#283694] border-2 border-[#283694] py-3 px-5 font-semibold hover:bg-[#283694] hover:text-white transition-colors duration-300 relative group"
                 >
                   <span className="inline-block w-48">Request A Quote</span>
@@ -273,11 +273,12 @@ export default function Home() {
               <div>
                 <h4 className="text-lg font-semibold text-[#283694] mb-4">DESTINATIONS</h4>
                 <div className="space-y-2">
-                  <Link href="/destinations/local" className="block text-gray-600 hover:text-[#283694]">Local</Link>
-                  <Link href="/destinations/europe" className="block text-gray-600 hover:text-[#283694]">Europe</Link>
-                  <Link href="/destinations/africa" className="block text-gray-600 hover:text-[#283694]">Africa</Link>
-                  <Link href="/destinations/zimbabwe" className="block text-gray-600 hover:text-[#283694]">Zimbabwe</Link>
-                  <Link href="/destinations/world" className="block text-gray-600 hover:text-[#283694]">Rest Of World</Link>
+                  <Link href="/services/africa" className="block text-gray-600 hover:text-[#283694]">Africa</Link>
+                  <Link href="/services/asia" className="block text-gray-600 hover:text-[#283694]">Asia</Link>
+                  <Link href="/services/australia" className="block text-gray-600 hover:text-[#283694]">Australia</Link>
+                  <Link href="/services/europe" className="block text-gray-600 hover:text-[#283694]">Europe</Link>
+                  <Link href="/services/north-america" className="block text-gray-600 hover:text-[#283694]">North America</Link>
+                  <Link href="/services/south-america" className="block text-gray-600 hover:text-[#283694]">South America</Link>
                 </div>
               </div>
 
@@ -286,10 +287,11 @@ export default function Home() {
                 <h4 className="text-lg font-semibold text-[#283694] mb-4">SERVICES</h4>
                 <div className="space-y-2">
                   <Link href="/services/air-freight" className="block text-gray-600 hover:text-[#283694]">Air Freight</Link>
+                  <Link href="/services/customs" className="block text-gray-600 hover:text-[#283694]">Customs Clearance</Link>
+                  <Link href="/services/door-to-door" className="block text-gray-600 hover:text-[#283694]">Door to Door</Link>
                   <Link href="/services/sea-freight" className="block text-gray-600 hover:text-[#283694]">Sea Freight</Link>
                   <Link href="/services/road-freight" className="block text-gray-600 hover:text-[#283694]">Road Freight</Link>
-                  <Link href="/services/customs" className="block text-gray-600 hover:text-[#283694]">Customs</Link>
-                  <Link href="/services/courier" className="block text-gray-600 hover:text-[#283694]">COURIER</Link>
+                  <Link href="/services/warehousing" className="block text-gray-600 hover:text-[#283694]">Warehousing</Link>
                 </div>
               </div>
 
@@ -298,10 +300,10 @@ export default function Home() {
                 <h4 className="text-lg font-semibold text-[#283694] mb-4">COMPANY</h4>
                 <div className="space-y-2">
                   <Link href="/about" className="block text-gray-600 hover:text-[#283694]">About Us</Link>
-                  <Link href="/news" className="block text-gray-600 hover:text-[#283694]">News</Link>
-                  <Link href="/office" className="block text-gray-600 hover:text-[#283694]">Registered Office</Link>
-                  <Link href="/environment" className="block text-gray-600 hover:text-[#283694]">Environment</Link>
-                  <Link href="/careers" className="block text-gray-600 hover:text-[#283694]">Careers</Link>
+                  <Link href="/contact" className="block text-gray-600 hover:text-[#283694]">Contact Us</Link>
+                  <Link href="/privacy" className="block text-gray-600 hover:text-[#283694]">Privacy Notice</Link>
+                  <Link href="/terms" className="block text-gray-600 hover:text-[#283694]">Terms of Service</Link>
+                  <Link href="/report-bug" className="block text-gray-600 hover:text-[#283694]">Report A Bug</Link>
                 </div>
               </div>
             </div>

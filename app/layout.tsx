@@ -26,7 +26,15 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <head></head>
+      <head>
+        <link
+          rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+          integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+          crossOrigin="anonymous"
+          referrerPolicy="no-referrer"
+        />
+      </head>
       <body className="bg-white flex flex-col min-h-screen">
         <Header />
         <div className="flex-grow pt-40">
@@ -36,7 +44,7 @@ export default function RootLayout({
           <div className="container mx-auto px-4 py-8">
             <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
               <div className="text-sm text-gray-600">
-                <span>Copyright ©2025 Cargo World Link Limited - Company No. 124356</span>
+                <span>Copyright ©2025 Cargo World Link Limited</span>
               </div>
               
               {/* Footer Links */}

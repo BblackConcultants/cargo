@@ -84,6 +84,40 @@ const Header = () => {
             </Link>
             <div className="relative group">
               <button
+                onClick={() => setActiveDropdown(activeDropdown === 'locations' ? null : 'locations')}
+                className="text-[#283694] hover:text-[#283694]/80 flex items-center space-x-1"
+              >
+                <span>Locations</span>
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                </svg>
+              </button>
+
+              {activeDropdown === 'locations' && (
+                <div className="absolute left-0 mt-2 w-48 bg-white border border-gray-200 rounded-md shadow-lg py-2">
+                  <Link href="/services/africa" className="block px-4 py-2 text-gray-700 hover:bg-gray-100">
+                    Africa
+                  </Link>
+                  <Link href="/services/asia" className="block px-4 py-2 text-gray-700 hover:bg-gray-100">
+                    Asia
+                  </Link>
+                  <Link href="/services/australia" className="block px-4 py-2 text-gray-700 hover:bg-gray-100">
+                    Australia
+                  </Link>
+                  <Link href="/services/europe" className="block px-4 py-2 text-gray-700 hover:bg-gray-100">
+                    Europe
+                  </Link>
+                  <Link href="/services/north-america" className="block px-4 py-2 text-gray-700 hover:bg-gray-100">
+                    North America
+                  </Link>
+                  <Link href="/services/south-america" className="block px-4 py-2 text-gray-700 hover:bg-gray-100">
+                    South America
+                  </Link>
+                </div>
+              )}
+            </div>
+            <div className="relative group">
+              <button
                 className="text-[#283694] hover:text-[#283694]/80 flex items-center space-x-1"
                 onClick={() => setActiveDropdown(activeDropdown === 'services' ? null : 'services')}
                 onMouseEnter={() => setActiveDropdown('services')}
@@ -172,9 +206,34 @@ const Header = () => {
                 </div>
               )}
             </div>
-            <Link href="/locations" className="text-[#283694] hover:text-[#283694]/80">
-              Locations
-            </Link>
+            <div className="relative group">
+              <Link href="/locations" className="text-[#283694] hover:text-[#283694]/80 flex items-center space-x-1">
+                <span>Locations</span>
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                </svg>
+              </Link>
+              <div className="absolute left-0 mt-2 w-48 bg-white border border-gray-200 rounded-md shadow-lg py-2 hidden group-hover:block">
+                <Link href="/services/africa" className="block px-4 py-2 text-gray-700 hover:bg-gray-100">
+                  Africa
+                </Link>
+                <Link href="/services/asia" className="block px-4 py-2 text-gray-700 hover:bg-gray-100">
+                  Asia
+                </Link>
+                <Link href="/services/australia" className="block px-4 py-2 text-gray-700 hover:bg-gray-100">
+                  Australia
+                </Link>
+                <Link href="/services/europe" className="block px-4 py-2 text-gray-700 hover:bg-gray-100">
+                  Europe
+                </Link>
+                <Link href="/services/north-america" className="block px-4 py-2 text-gray-700 hover:bg-gray-100">
+                  North America
+                </Link>
+                <Link href="/services/south-america" className="block px-4 py-2 text-gray-700 hover:bg-gray-100">
+                  South America
+                </Link>
+              </div>
+            </div>
           </nav>
 
           {/* CTA Button */}
@@ -336,12 +395,39 @@ const Header = () => {
                   </div>
                 )}
               </div>
-              <Link
-                href="/locations"
-                className="block px-3 py-2 text-gray-600 hover:text-blue-600"
-              >
-                Locations
-              </Link>
+              <div>
+                <button 
+                  onClick={() => setActiveSubDropdown(activeSubDropdown === 'mobile-locations' ? null : 'mobile-locations')}
+                  className="flex items-center justify-between w-full px-3 py-2 text-gray-600 hover:text-blue-600"
+                >
+                  <span>Locations</span>
+                  <svg className={`w-4 h-4 transform transition-transform ${activeSubDropdown === 'mobile-locations' ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                  </svg>
+                </button>
+                {activeSubDropdown === 'mobile-locations' && (
+                  <div className="pl-4 space-y-2">
+                    <Link href="/services/africa" className="block py-1 text-gray-600 hover:text-blue-600">
+                      Africa
+                    </Link>
+                    <Link href="/services/asia" className="block py-1 text-gray-600 hover:text-blue-600">
+                      Asia
+                    </Link>
+                    <Link href="/services/australia" className="block py-1 text-gray-600 hover:text-blue-600">
+                      Australia
+                    </Link>
+                    <Link href="/services/europe" className="block py-1 text-gray-600 hover:text-blue-600">
+                      Europe
+                    </Link>
+                    <Link href="/services/north-america" className="block py-1 text-gray-600 hover:text-blue-600">
+                      North America
+                    </Link>
+                    <Link href="/services/south-america" className="block py-1 text-gray-600 hover:text-blue-600">
+                      South America
+                    </Link>
+                  </div>
+                )}
+              </div>
               <div className="border-t border-gray-200 pt-2 mt-2">
                 <Link
                   href="/newsroom"

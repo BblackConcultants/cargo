@@ -5,14 +5,18 @@ const nextConfig = {
   assetPrefix: process.env.NODE_ENV === 'development' ? '' : '/cargo',
   distDir: 'dist',
   images: {
-    loader: 'custom',
-    loaderFile: './image-loader.js',
-    unoptimized: true
+    unoptimized: true,
+    domains: ['upload.wikimedia.org'],
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'upload.wikimedia.org',
+        pathname: '/wikipedia/commons/**',
+      },
+    ],
   },
   trailingSlash: true,
-  experimental: {
-    appDir: true
-  },
+
   env: {
     NEXT_PUBLIC_BASE_PATH: process.env.NODE_ENV === 'development' ? '' : '/cargo',
   },

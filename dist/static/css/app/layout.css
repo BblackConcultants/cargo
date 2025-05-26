@@ -537,9 +537,6 @@ video {
 .relative {
   position: relative;
 }
-.sticky {
-  position: sticky;
-}
 .inset-0 {
   inset: 0px;
 }
@@ -557,9 +554,6 @@ video {
 }
 .top-1\/2 {
   top: 50%;
-}
-.top-8 {
-  top: 2rem;
 }
 .z-10 {
   z-index: 10;
@@ -673,9 +667,6 @@ video {
 .h-24 {
   height: 6rem;
 }
-.h-32 {
-  height: 8rem;
-}
 .h-4 {
   height: 1rem;
 }
@@ -703,6 +694,9 @@ video {
 .h-\[40vh\] {
   height: 40vh;
 }
+.h-\[50vh\] {
+  height: 50vh;
+}
 .h-\[60vh\] {
   height: 60vh;
 }
@@ -714,9 +708,6 @@ video {
 }
 .h-full {
   height: 100%;
-}
-.h-\[50vh\] {
-  height: 50vh;
 }
 .max-h-20 {
   max-height: 5rem;
@@ -875,6 +866,9 @@ video {
 }
 .gap-8 {
   gap: 2rem;
+}
+.gap-2 {
+  gap: 0.5rem;
 }
 .gap-x-6 {
   -moz-column-gap: 1.5rem;
@@ -1077,6 +1071,9 @@ video {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
+.bg-opacity-50 {
+  --tw-bg-opacity: 0.5;
+}
 .bg-cover {
   background-size: cover;
 }
@@ -1099,6 +1096,12 @@ video {
 }
 .p-8 {
   padding: 2rem;
+}
+.p-2 {
+  padding: 0.5rem;
+}
+.p-3 {
+  padding: 0.75rem;
 }
 .px-2 {
   padding-left: 0.5rem;
@@ -1331,6 +1334,11 @@ video {
   --tw-shadow-colored: 0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
+.shadow-sm {
+  --tw-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --tw-shadow-colored: 0 1px 2px 0 var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
 .filter {
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
@@ -1429,9 +1437,25 @@ video {
   padding-bottom: 0px;
 }
 
+.hover\:scale-105:hover {
+  --tw-scale-x: 1.05;
+  --tw-scale-y: 1.05;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.hover\:scale-110:hover {
+  --tw-scale-x: 1.1;
+  --tw-scale-y: 1.1;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
 .hover\:bg-\[\#283694\]:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(40 54 148 / var(--tw-bg-opacity));
+}
+
+.hover\:bg-\[\#283694\]\/90:hover {
+  background-color: rgb(40 54 148 / 0.9);
 }
 
 .hover\:bg-\[\#e06411\]:hover {
@@ -1465,6 +1489,11 @@ video {
 .hover\:bg-white:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+
+.hover\:bg-\[\#1e2a70\]:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(30 42 112 / var(--tw-bg-opacity));
 }
 
 .hover\:text-\[\#283694\]:hover {
@@ -1515,6 +1544,11 @@ video {
   border-color: transparent;
 }
 
+.focus\:border-\[\#283694\]:focus {
+  --tw-border-opacity: 1;
+  border-color: rgb(40 54 148 / var(--tw-border-opacity));
+}
+
 .focus\:outline-none:focus {
   outline: 2px solid transparent;
   outline-offset: 2px;
@@ -1542,6 +1576,10 @@ video {
 
 .focus\:ring-offset-2:focus {
   --tw-ring-offset-width: 2px;
+}
+
+.group:hover .group-hover\:block {
+  display: block;
 }
 
 .group:hover .group-hover\:translate-x-2 {
@@ -1572,12 +1610,12 @@ video {
 
 @media (min-width: 768px) {
 
-  .md\:col-span-2 {
-    grid-column: span 2 / span 2;
+  .md\:order-1 {
+    order: 1;
   }
 
-  .md\:mt-0 {
-    margin-top: 0px;
+  .md\:col-span-2 {
+    grid-column: span 2 / span 2;
   }
 
   .md\:mb-12 {
@@ -1588,6 +1626,10 @@ video {
     margin-bottom: 2rem;
   }
 
+  .md\:mt-0 {
+    margin-top: 0px;
+  }
+
   .md\:flex {
     display: flex;
   }
@@ -1596,16 +1638,16 @@ video {
     display: none;
   }
 
-  .md\:h-\[60vh\] {
-    height: 60vh;
-  }
-
   .md\:h-24 {
     height: 6rem;
   }
 
   .md\:h-32 {
     height: 8rem;
+  }
+
+  .md\:h-\[60vh\] {
+    height: 60vh;
   }
 
   .md\:w-auto {
