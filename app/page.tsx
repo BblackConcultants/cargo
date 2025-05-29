@@ -292,6 +292,7 @@ export default function Home() {
                   <Link href="/services/sea-freight" className="block text-gray-600 hover:text-[#283694]">Sea Freight</Link>
                   <Link href="/services/road-freight" className="block text-gray-600 hover:text-[#283694]">Road Freight</Link>
                   <Link href="/services/warehousing" className="block text-gray-600 hover:text-[#283694]">Warehousing</Link>
+                  <Link href="/services/car-shipping" className="block text-gray-600 hover:text-[#283694]">Vehicle Shipping</Link>
                 </div>
               </div>
 

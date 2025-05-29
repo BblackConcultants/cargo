@@ -60,6 +60,11 @@ const Footer = () => {
                   Customs Brokerage
                 </Link>
               </li>
+              <li>
+                <Link href="/services/car-shipping" className="text-gray-400 hover:text-white">
+                  Car Shipping
+                </Link>
+              </li>
             </ul>
           </div>
 

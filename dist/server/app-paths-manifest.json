@@ -1,10 +1,6 @@
 {
-  "/_not-found/page": "app/_not-found/page.js",
-  "/services/north-america/page": "app/services/north-america/page.js",
-  "/page": "app/page.js",
-  "/services/road-freight/page": "app/services/road-freight/page.js",
-  "/contact/page": "app/contact/page.js",
-  "/quote/page": "app/quote/page.js",
-  "/favicon.ico/route": "app/favicon.ico/route.js",
-  "/pod-form/page": "app/pod-form/page.js"
+  "/about/page": "app/about/page.js",
+  "/services/car-shipping/page": "app/services/car-shipping/page.js",
+  "/services/air-freight/page": "app/services/air-freight/page.js",
+  "/page": "app/page.js"
 }

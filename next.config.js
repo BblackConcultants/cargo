@@ -1,8 +1,8 @@
 /** @type {import('next').NextConfig} */
-/** @type {import('next').NextConfig} */
 const nextConfig = {
   basePath: process.env.NODE_ENV === 'development' ? '' : '/cargo',
   assetPrefix: process.env.NODE_ENV === 'development' ? '' : '/cargo',
+  output: 'export',
   distDir: 'dist',
   images: {
     unoptimized: true,

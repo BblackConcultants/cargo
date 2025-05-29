@@ -156,6 +156,9 @@ const Header = () => {
                   <Link href="/services/you-buy-we-fly" className="block px-4 py-2 hover:bg-gray-50">
                     You Buy, We Fly
                   </Link>
+                  <Link href="/services/car-shipping" className="block px-4 py-2 hover:bg-gray-50">
+                    Vehicle Shipping
+                  </Link>
                 </div>
               )}
             </div>
@@ -325,6 +328,9 @@ const Header = () => {
                         </button>
                         {activeSubDropdown === 'mobile-vehicle-shipping' && (
                           <div className="pl-4 space-y-1">
+                            <Link href="/services/car-shipping" className="block py-1 text-gray-600 hover:text-blue-600">
+                              Vehicle Shipping
+                            </Link>
                             <Link href="/shipping-cars-to-africa" className="block py-1 text-gray-600 hover:text-blue-600">
                               Shipping Cars To Africa
                             </Link>
