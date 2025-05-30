@@ -1,6 +1,0 @@
-{
-  "/about/page": "app/about/page.js",
-  "/services/car-shipping/page": "app/services/car-shipping/page.js",
-  "/services/air-freight/page": "app/services/air-freight/page.js",
-  "/page": "app/page.js"
-}

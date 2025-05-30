@@ -66,7 +66,15 @@ export default function CarShippingPage() {
         <div className="absolute inset-0 bg-black/50 flex items-center justify-center">
           <div className="text-center text-white">
             <h1 className="text-4xl md:text-5xl font-bold mb-4">International Car Shipping</h1>
-            <p className="text-xl max-w-2xl mx-auto">Safe and secure vehicle transport worldwide</p>
+            <p className="text-xl max-w-2xl mx-auto mb-8">Safe and secure vehicle transport worldwide</p>
+            <Link
+              href="https://shippingcarsworldwide.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block px-8 py-4 bg-[#f47521] text-white font-semibold rounded-lg hover:bg-[#f47521]/90 transition-colors duration-300"
+            >
+              Ship Your Vehicle Now
+            </Link>
 
           </div>
         </div>
